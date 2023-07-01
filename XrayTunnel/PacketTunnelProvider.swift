@@ -11,7 +11,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider, XrayClientProtocol, XrayOSLo
     
     private let instance = XrayInstance()
     
-    private let logger = Logger(subsystem: "com.Arror.Mango.XrayTunnel", category: "Core")
+    private let logger = Logger(subsystem: "fun.zwang.mango.XrayTunnel", category: "Core")
     
     override init() {
         super.init()
@@ -126,6 +126,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider, XrayClientProtocol, XrayOSLo
         @unknown default:
             return
         }
+        logger.log("错误信息\(message)")
         MGNotification.send(title: "", subtitle: "", body: message)
     }
     

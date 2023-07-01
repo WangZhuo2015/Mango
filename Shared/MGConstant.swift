@@ -56,6 +56,6 @@ extension UserDefaults {
 extension NSError {
     
     public static func newError(_ message: String) -> NSError {
-        NSError(domain: "com.Arror.Mango", code: 0, userInfo: [NSLocalizedDescriptionKey: message])
+        NSError(domain: "fun.zwang.mango", code: 0, userInfo: [NSLocalizedDescriptionKey: message])
     }
 }
